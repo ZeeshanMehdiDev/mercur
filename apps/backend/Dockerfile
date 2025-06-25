@@ -51,6 +51,6 @@ COPY --from=installer /app .
 
 WORKDIR /app/apps/backend
 
-RUN yarn db:migrate
-
-CMD ["yarn", "start"]
+ENV DATABASE_URL=postgresql://postgres:hakgYEfBUwxuutonEuvSkzFKBUUQLFvQ@ballast.proxy.rlwy.net:12067/railway
+ENV REDIS_URL=redis://default:iAFOFRGyuCIcjJoGMladVCMkULnMCKCY@nozomi.proxy.rlwy.net:14773
+CMD ["sh", "-c", "yarn db:migrate && yarn start"]
