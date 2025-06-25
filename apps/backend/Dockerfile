@@ -31,5 +31,4 @@ RUN chown -R medusa:medusa /app
 USER medusa
 WORKDIR /app/apps/backend
 ENV DATABASE_URL=postgresql://postgres:hakgYEfBUwxuutonEuvSkzFKBUUQLFvQ@ballast.proxy.rlwy.net:12067/railway
-ENV REDIS_URL=redis://default:iAFOFRGyuCIcjJoGMladVCMkULnMCKCY@nozomi.proxy.rlwy.net:14773
 CMD ["sh", "-c", "yarn db:migrate && yarn start"]
