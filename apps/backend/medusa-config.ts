@@ -42,13 +42,13 @@ module.exports = defineConfig({
         webhookSecret: process.env.STRIPE_CONNECTED_ACCOUNTS_WEBHOOK_SECRET
       }
     },
-    // {
-    //   resolve: './src/modules/algolia',
-    //   options: {
-    //     apiKey: process.env.ALGOLIA_API_KEY,
-    //     appId: process.env.ALGOLIA_APP_ID
-    //   }
-    // },
+    {
+      resolve: './src/modules/algolia',
+      options: {
+        apiKey: process.env.ALGOLIA_API_KEY,
+        appId: process.env.ALGOLIA_APP_ID
+      }
+    },
     {
       resolve: '@medusajs/medusa/payment',
       options: {
