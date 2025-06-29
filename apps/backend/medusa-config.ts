@@ -10,9 +10,9 @@ module.exports = defineConfig({
     http: {
       storeCors: process.env.STORE_CORS!,
       adminCors: process.env.ADMIN_CORS!,
+      authCors: process.env.AUTH_CORS || 'https://rixdev-vendor-panel.up.railway.app',
       // @ts-expect-error: vendorCors is not a valid config
-      vendorCors: process.env.VENDOR_CORS!,
-      authCors: process.env.AUTH_CORS!,
+      vendorCors: process.env.VENDOR_CORS || 'https://rixdev-vendor-panel.up.railway.app',
       jwtSecret: process.env.JWT_SECRET || 'supersecret',
       cookieSecret: process.env.COOKIE_SECRET || 'supersecret'
     }
